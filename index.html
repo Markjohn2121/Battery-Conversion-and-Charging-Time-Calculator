@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Battery Conversion and Charging Time Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div class="container">
+     <h1>Battery Conversion and Charging Time Calculator</h1>
+  
+     <h2>Convert mAh to Ah</h2>
+     <input type="number" id="mAhInput" placeholder="Enter mAh value">
+     <button onclick="convertmAhToAh()">Convert</button>
+     <p id="AhOutput" class="result"></p>
+  
+     <h2>Convert Ah to mAh</h2>
+     <input type="number" id="AhInput" placeholder="Enter Ah value">
+     <button onclick="convertAhTomAh()">Convert</button>
+     <p id="mAhOutput" class="result"></p>
+  
+     <h2>Convert Watts to mAh and Ah</h2>
+     <input type="number" id="wattsInput" placeholder="Enter watts value">
+     <input type="number" id="voltageInput" placeholder="Enter voltage value">
+     <button onclick="convertWattsTomAh()">Convert</button>
+     <p id="mAhWattsOutput" class="result"></p>
+     <p id="AhWattsOutput" class="result"></p>
+  
+     <h2>Calculate Charging Time</h2>
+     <input type="number" id="capacityInput" placeholder="Enter battery capacity (mAh)">
+     <input type="number" id="currentInput" placeholder="Enter charging current (mA)">
+     <button onclick="calculateChargingTime()">Calculate</button>
+     <p id="chargingTimeOutput" class="result"></p>
+  
+     <h2>Calculate Battery Life</h2>
+     <p>Enter the Ah requirements for each device:</p>
+     <div id="deviceContainer">
+       <input type="number" class="device" placeholder="Device (Ah)">
+     </div>
+     <button onclick="addDeviceInput()">Add Device</button>
+     <button onclick="removeDeviceInput()">Remove Device</button>
+     <button onclick="calculateBatteryLife()">Calculate</button>
+     <p id="batteryLifeOutput" class="result"></p>
+   </div>
+   
+   <script src="main.js"></script>
+</body>
+</html>
